@@ -1,10 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.7.0' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-            }
-        }
+  agent any
+
+  stages {
+    stage ('test') {
+      steps {
+        sh 'hello test'
+      }
     }
+  }
 }
